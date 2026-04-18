@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pochita</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #000000;
+      --text: #ffffff;
+      --accent: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Space Mono', monospace;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .splash {
+      text-align: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: clamp(3rem, 15vw, 6rem);
+      font-weight: 700;
+      letter-spacing: -0.05em;
+      color: var(--accent);
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .hint {
+      font-size: 0.75rem;
+      color: #333;
+      margin-top: 2rem;
+      opacity: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      animation: fadeIn 0.8s ease 0.5s forwards;
+    }
+  </style>
+</head>
+<body>
+  <div class="splash" id="splash">
+    <div class="logo">Pochita</div>
+    <div class="hint">click to enter</div>
+  </div>
+  <script>
+    document.getElementById('splash').addEventListener('click', function() {
+      window.location.href = 'main.html';
+    });
+  </script>
+</body>

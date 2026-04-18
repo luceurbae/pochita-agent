@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pochita — BTC 15m Trader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="logo">
+      <div class="logo-icon">P</div>
+      Pochita
+    </a>
+    <div class="nav-links">
+      <button class="nav-btn active" id="navHome" onclick="showPage('home')">Home</button>
+      <button class="nav-btn" id="navDashboard" onclick="showPage('dashboard')">Dashboard</button>
+      <button class="nav-cta" onclick="showPage('dashboard')">Launch App</button>
+    </div>
+  </nav>
+
+  <!-- HOME PAGE -->
+  <div class="page active" id="pageHome">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-badge">Autonomous BTC Trading Agent</div>
+      <h1 class="hero-title">
+        Trade Bitcoin<br/>
+        <span class="accent">Systematically</span>
+      </h1>
+      <p class="hero-subtitle">
+        AI-powered discipline. Analyzes BTC markets every 15 minutes,
+        waits for the right setup, executes trades at optimal prices — 24/7.
+      </p>
+      <div class="hero-actions">
+        <button class="btn-primary btn-large" onclick="showPage('dashboard')">
+          Start Trading
+        </button>
+        <button class="btn-outline btn-large" onclick="showPage('dashboard')">
+          View Dashboard
+        </button>
+      </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-number">80%</div>
+        <div class="stat-label">Backtest Win Rate</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">$5</div>
+        <div class="stat-label">Per Trade</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">15m</div>
+        <div class="stat-label">Market Interval</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">&lt;50c</div>
+        <div class="stat-label">Entry Price Filter</div>
+      </div>
+    </div>
+
+    <!-- FEATURES -->
+    <section class="section" style="padding-top:0">
+      <div class="section-tag">Features</div>
+      <h2 class="section-title">Built for disciplined trading</h2>
+      <p class="section-sub">
+        Multi-timeframe analysis, conviction filtering, and strict rule-based risk management.
+      </p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-num">01</div>
+          <div class="feature-title">Multi-Timeframe Analysis</div>
+          <div class="feature-desc">
+            Reads 1m, 5m, and 15m trends simultaneously using Binance data + AI reasoning.
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-num">02</div>
+          <div class="feature-title">Conviction Filtering</div>
+          <div class="feature-desc">
+            Only trades at 80%+ conviction. Lower confidence setups are skipped automatically.
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-num">03</div>
+          <div class="feature-title">Price Entry Filter</div>
+          <div class="feature-desc">
+            Paper entries only trigger when Polymarket side price drops to 50c or lower.
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-num">04</div>
+          <div class="feature-title">Rule Engine + AI</div>
+          <div class="feature-desc">
+            Combines hard-skip rules (RSI, trend conflict, buy pressure) with OpenRouter LLM analysis.
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-num">05</div>
+          <div class="feature-title">60s Market Wait</div>
+          <div class="feature-desc">
+            Waits 60 seconds after market opens before analyzing — avoiding early volatility.
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-num">06</div>
+          <div class="feature-title">Live Paper Trading</div>
+          <div class="feature-desc">
+            Simulate real trades with $50 bankroll. Track performance and P&L in real time.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" style="padding-top:0">
+      <div class="section-tag">Process</div>
+      <h2 class="section-title">Every 15 minutes, on autopilot</h2>
+      <div class="steps-row">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <div class="step-title">Wait for Market Open</div>
+          <div class="step-desc">
+            Each BTC 15-minute market opens at XX:00, XX:15, XX:30, XX:45. Pochita waits 60 seconds for price to stabilize.
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <div class="step-title">AI Market Analysis</div>
+          <div class="step-desc">
+            Scrapes Polymarket + Binance for RSI, trend, buy pressure, and price delta — then asks the AI for a verdict.
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <div class="step-title">Signal or Skip</div>
+          <div class="step-desc">
+            If conviction is 80%+ and rule engine approves, enter. Otherwise skip. No exceptions.
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <div class="step-title">Monitor and Log</div>
+          <div class="step-desc">
+            Watches Polymarket side price every 5 seconds. Entry triggered at 50c or lower. Take profit at 2×. Result logged automatically.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROTECTION -->
+    <section class="section" style="padding-top:0">
+      <div class="section-tag">Risk Management</div>
+      <h2 class="section-title">Protection built into the loop</h2>
+      <p class="section-sub">
+        Pochita doesn't trade on impulse — every decision passes through hard filters first.
+      </p>
+      <div class="protection-grid">
+        <div class="protection-card">
+          <div class="protection-check">—</div>
+          <div>
+            <div class="protection-title">RSI Hard Boundaries</div>
+            <div class="protection-desc">Skips if RSI is 45–55 (neutral) or above 70 (overbought/oversold).</div>
+          </div>
+        </div>
+        <div class="protection-card">
+          <div class="protection-check">—</div>
+          <div>
+            <div class="protection-title">Trend Conflict Filter</div>
+            <div class="protection-desc">Skips when 15m and 5m trends conflict — avoiding sideways noise.</div>
+          </div>
+        </div>
+        <div class="protection-card">
+          <div class="protection-check">—</div>
+          <div>
+            <div class="protection-title">Buy Pressure Threshold</div>
+            <div class="protection-desc">UP signal requires 55%+ buy pressure. DOWN requires 45% or less.</div>
+          </div>
+        </div>
+        <div class="protection-card">
+          <div class="protection-check">—</div>
+          <div>
+            <div class="protection-title">Price Delta Gate</div>
+            <div class="protection-desc">Skips if |price delta| is below $5 — no entries on small movements.</div>
+          </div>
+        </div>
+        <div class="protection-card">
+          <div class="protection-check">—</div>
+          <div>
+            <div class="protection-title">Conviction Floor</div>
+            <div class="protection-desc">Minimum 80% AI conviction required. Below threshold means skip.</div>
+          </div>
+        </div>
+        <div class="protection-card">
+          <div class="protection-check">—</div>
+          <div>
+            <div class="protection-title">AI Bias Alignment</div>
+            <div class="protection-desc">AI prediction must match rule engine bias. If not aligned, it is skipped.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-section">
+      <div class="cta-title">Ready to watch Pochita trade?</div>
+      <p class="cta-sub">
+        Start the paper trader and track performance overnight.<br/>
+        Win rate, P&L, and drawdowns — all in real time.
+      </p>
+      <button class="btn-primary btn-large" onclick="showPage('dashboard')">
+        Open Dashboard
+      </button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="builder">
+        <div class="builder-avatar">Z</div>
+        <div class="builder-info">
+          <div class="builder-name">Built by zaluce</div>
+          <div class="builder-links">
+            <a href="https://github.com/luceurbae" target="_blank">GitHub</a>
+            <a href="https://t.me/flucez" target="_blank">Telegram</a>
+            <a href="https://x.com/luceurbae" target="_blank">X</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 12px; font-size: 0.75rem; color: var(--muted);">
+        Pochita — BTC 15m Trader &nbsp;|&nbsp; Not financial advice
+      </div>
+    </footer>
+  </div>
+
+  <!-- DASHBOARD PAGE -->
+  <div class="page" id="pageDashboard">
+    <div class="dashboard-banner" id="dashboardBanner" onclick="dismissBanner()">
+      <span class="banner-icon"></span>
+      <span class="banner-text">This P&L is a simulation based on actual backtest performance (80% win rate from 100 trades). Still in development.</span>
+    </div>
+    <div class="dashboard-container">
+
+      <!-- Interactive Controls -->
+      <div class="dashboard-controls">
+        <button class="btn-primary" id="btnNewTrade" onclick="runSimTrade()">
+          New Trade
+        </button>
+        <button class="btn-outline" onclick="togglePause()">
+          <span id="pauseLabel">Pause</span>
+        </button>
+        <button class="btn-outline" onclick="resetSim()">
+          Reset
+        </button>
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-label">Total Trades</div>
+          <div class="metric-value" id="totalTrades">0</div>
+          <div class="metric-sub" id="settledTrades">0 settled</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Wins</div>
+          <div class="metric-value" id="wins">0</div>
+          <div class="metric-sub" id="lossesMetric">0 losses</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Skipped</div>
+          <div class="metric-value" id="skipped">0</div>
+          <div class="metric-sub">no signal</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">Win Rate</div>
+          <div class="metric-value" id="winRate">0%</div>
+          <div class="metric-sub" id="winRateSub">—</div>
+        </div>
+      </div>
+
+      <div class="wr-balance-row">
+        <div class="card">
+          <div class="card-title">Win / Loss Breakdown</div>
+          <div class="wr-circle-wrap">
+            <div class="wr-circle">
+              <svg viewBox="0 0 120 120">
+                <circle class="wr-bg" cx="60" cy="60" r="50"/>
+                <circle class="wr-fill" id="wrFill" cx="60" cy="60" r="50"/>
+              </svg>
+              <div class="wr-center">
+                <div class="wr-pct" id="wrPct">0%</div>
+                <div class="wr-lbl">WR</div>
+              </div>
+            </div>
+            <div class="wr-stats">
+              <div class="wr-stat-row">
+                <span class="wr-stat-label">Correct</span>
+                <span class="wr-stat-val" id="statWins">0</span>
+              </div>
+              <div class="wr-stat-row">
+                <span class="wr-stat-label">Wrong</span>
+                <span class="wr-stat-val" id="statLosses">0</span>
+              </div>
+              <div class="wr-stat-row">
+                <span class="wr-stat-label">Pending</span>
+                <span class="wr-stat-val" id="statPending">0</span>
+              </div>
+              <div class="wr-stat-row">
+                <span class="wr-stat-label">Skipped</span>
+                <span class="wr-stat-val" id="statSkipped">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card balance-display">
+          <div class="card-title">Paper Balance</div>
+          <div class="balance-value" id="balanceValue">$50.00</div>
+          <div class="balance-change" id="balanceChange">$0.00</div>
+          <div style="margin-top:16px" class="balance-meta">
+            Started at <strong>$50.00</strong>
+          </div>
+          <div style="margin-top:6px" class="balance-meta">
+            Per trade: <strong>$5.00</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <div>
+          <div class="card">
+            <div class="card-title" style="display:flex; justify-content:space-between; align-items:center;">
+              Recent Trades
+              <span style="font-size:0.62rem; color:var(--muted); text-transform:none; letter-spacing:0; font-weight:400" id="logCount">0 entries</span>
+            </div>
+            <div class="trade-log" id="tradeLog">
+              <div style="text-align:center; color:var(--muted); padding:40px 0; font-size:0.8rem">
+                No trades yet — start the trader to see activity
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <div class="card">
+            <div class="card-title">Latest Signal</div>
+            <div class="signal-prediction skip" id="signalPred">—</div>
+            <div class="signal-conviction" id="signalConv">Waiting for signal...</div>
+            <div class="signal-bar-bg">
+              <div class="signal-bar-fill" id="signalBar" style="width:0%"></div>
+            </div>
+            <div style="margin-top:12px; font-size:0.72rem; color:var(--muted); text-align:center" id="signalSetup">
+              No active signal
+            </div>
+          </div>
+
+          <div class="card controls">
+            <div class="card-title">Controls</div>
+            <button class="btn btn-start" id="btnStart" onclick="startTrader()">Start Trader</button>
+            <button class="btn btn-stop" id="btnStop" onclick="stopTrader()" disabled>Stop Trader</button>
+            <button class="btn" onclick="refreshData()">Refresh</button>
+            <button class="btn" onclick="resetSession()">Reset Session</button>
+          </div>
+
+          <div class="card">
+            <div class="card-title">PnL Summary</div>
+            <div class="pnl-row">
+              <span class="pnl-label">Gross Wins</span>
+              <span class="pnl-val" id="grossWins">$0.00</span>
+            </div>
+            <div class="pnl-row">
+              <span class="pnl-label">Gross Losses</span>
+              <span class="pnl-val" id="grossLosses">$0.00</span>
+            </div>
+            <div class="pnl-row" style="border-top:1px solid var(--border); margin-top:4px; padding-top:8px; font-weight:700">
+              <span>Net P&L</span>
+              <span id="netPnl">$0.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      <div class="builder" style="justify-content: center;">
+        <div class="builder-avatar">Z</div>
+        <div class="builder-info">
+          <div class="builder-name">Built by zaluce</div>
+          <div class="builder-links">
+            <a href="https://github.com/luceurbae" target="_blank">GitHub</a>
+            <a href="https://t.me/flucez" target="_blank">Telegram</a>
+            <a href="https://x.com/luceurbae" target="_blank">X</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 8px;">Pochita — BTC 15m Trader &nbsp;|&nbsp; Not financial advice</div>
+    </div>
+  </div>
+
+</body>
