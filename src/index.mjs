@@ -284,6 +284,21 @@ function runSimTrade() {
   const wrFill = document.getElementById('wrFill');
   if (wrFill) gsap.to(wrFill, { strokeDashoffset: offset, duration: 0.5, ease: 'power2.out' });
   
+  // Animate WR percentage number
+  const wrPct = document.getElementById('wrPct');
+  if (wrPct) {
+    const currentPct = parseInt(wrPct.textContent) || 0;
+    const targetPct = Math.round(wr * 100);
+    gsap.to({ val: currentPct }, {
+      val: targetPct,
+      duration: 0.5,
+      ease: 'power2.out',
+      onUpdate: function() {
+        document.getElementById('wrPct').textContent = Math.round(this.targets()[0].val) + '%';
+      }
+    });
+  }
+  
   // Auto-trigger next trade after delay
   if (!simState.paused) {
     simState.timer = setTimeout(runSimTrade, 2000 + Math.random() * 3000); // 2-5s delay
